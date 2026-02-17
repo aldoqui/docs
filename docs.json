@@ -41,9 +41,10 @@
             ]
           },
           {
-            "group": "Customization",
+            "group": "Configuraciones",
             "pages": [
-              "como-configurar",
+              "como-configurar-empresa",
+              "essentials/configurar-sucursales",
               "essentials/settings",
               "essentials/navigation"
             ]
