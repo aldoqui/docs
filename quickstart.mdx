@@ -1,80 +1,114 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: "Inicio rápido"
+description: "Comienza a usar Solución Factura en minutos"
 ---
 
-## Get started in three steps
+## Comienza en tres sencillos pasos
 
-Get your documentation site running locally and make your first customization.
+Configura tu cuenta y empieza a facturar correctamente en **Solución Factura**.
 
-### Step 1: Set up your local environment
+---
+
+### Paso 1: Registro en Solución Factura
+
+El primer paso es crear tu cuenta en la plataforma.
 
 <AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
+  <Accordion icon="user-plus" title="Registrarse en la plataforma">
+    Ingresa a la siguiente liga y realiza tu registro:
+
+    👉 https://app.solucionfactura.mx/login
+
+    Completa el formulario con tus datos y finaliza el proceso de registro.
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
+
+  <Accordion icon="envelope" title="Correos de confirmación">
+    Una vez realizado el registro, recibirás **dos correos electrónicos**:
+
+    1. **Correo de bienvenida**  
+       Incluye el correo registrado y la contraseña de acceso.
+
+    2. **Correo de activación**  
+       Este correo es indispensable para completar el registro, ya que contiene el enlace de verificación.
+
+    <Tip>
+      El correo de activación debe abrirse desde la misma bandeja de entrada donde fue recibido.
+    </Tip>
   </Accordion>
 </AccordionGroup>
 
-### Step 2: Deploy your changes
+---
+
+### Paso 2: Activación y configuración de tu cuenta
+
+Después de verificar tu correo, podrás comenzar con la configuración de tu cuenta.
 
 <AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+  <Accordion icon="check-circle" title="Verificar tu cuenta">
+    Da clic en el enlace de verificación incluido en el correo de activación.
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+    Una vez verificada tu cuenta, tendrás acceso completo a la plataforma.
+  </Accordion>
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
+  <Accordion icon="gear" title="Configurar tu información fiscal">
+    Configura los datos necesarios para comenzar a facturar:
+
+    - RFC  
+    - Régimen fiscal  
+    - Razón social  
+    - Certificados de sello digital (CSD)  
+    - Datos generales del emisor  
+
+    <Tip>
+      Una correcta configuración es fundamental para evitar errores en tus CFDI.
+    </Tip>
   </Accordion>
 </AccordionGroup>
 
-### Step 3: Go live
+---
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
+### Paso 3: Comienza a facturar
+
+Una vez configurada tu cuenta, ya puedes comenzar a emitir tus comprobantes fiscales.
+
+<Accordion icon="rocket" title="Empieza a usar Solución Factura">
+  Desde el panel principal podrás:
+
+  - Emitir facturas CFDI 4.0  
+  - Generar notas de crédito  
+  - Crear recibos de honorarios y arrendamiento  
+  - Descargar y enviar PDF y XML  
+
+  ¡Tu cuenta ya está lista para operar!
 </Accordion>
 
-## Next steps
+---
 
-Now that you have your docs running, explore these key features:
+## Siguientes pasos
+
+Ahora que tu cuenta está activa, te recomendamos explorar los siguientes recursos:
 
 <CardGroup cols={2}>
+  <Card title="Emitir CFDI" icon="pen-to-square" href="/cfdi/facturacion">
+    Aprende a generar facturas y otros comprobantes fiscales.
+  </Card>
 
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
+  <Card title="Personalizar documentos" icon="palette" href="/personalizacion">
+    Ajusta plantillas PDF, logotipo y colores de tus documentos.
+  </Card>
 
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
+  <Card title="Complementos y pagos" icon="credit-card" href="/pagos/complemento-pago">
+    Genera complementos de pago y administra facturas PPD.
+  </Card>
 
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
+  <Card title="API e integraciones" icon="code" href="/api">
+    Conecta Solución Factura con otros sistemas mediante API.
+  </Card>
 </CardGroup>
 
+---
+
 <Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
+  **¿Necesitas ayuda?**  
+  Consulta nuestra Base de Conocimiento o contacta a nuestro equipo de soporte técnico desde el centro de ayuda.
 </Note>
