@@ -1,5 +1,5 @@
 ---
-title: "Introducción a la API de Solución Factura"
+title: "API de Solución Factura"
 ---
 
 La **API de Solución Factura** permite integrar tu sistema, ERP o aplicación con nuestra plataforma de facturación electrónica, facilitando la **gestión automatizada de clientes, productos y CFDI**.
@@ -15,18 +15,13 @@ Esta API está diseñada para desarrolladores y empresas que necesitan:
 
 ## Autenticación
 
-Todas las peticiones requieren autenticación mediante **Bearer Token**:
-Content-Type: application/jsontoxml
-
+Todas las peticiones requieren autenticación mediante **Bearer Token**: Content-Type: application/jsontoxml
 
 ---
 
 ## URL base
 
-
-
 https://app.solucionfactura.com
-
 
 ---
 
@@ -49,6 +44,7 @@ La documentación se divide en los siguientes módulos:
 - Descarga de CFDI
 
 Cada módulo incluye:
+
 - Endpoint
 - Método HTTP
 - Ejemplo de request
@@ -67,11 +63,7 @@ Cada módulo incluye:
 
 ## Headers
 
-
-
-Authorization: Bearer TU_TOKEN
-Content-Type: application/jsontoxml
-
+Authorization: Bearer TU_TOKEN Content-Type: application/jsontoxml
 
 ---
 
@@ -232,3 +224,4 @@ Los valores deben coincidir con el Anexo 20 del SAT
 Los catálogos válidos se configuran en Solución Factura
 
 Los errores de validación usan HTTP 422
+```
