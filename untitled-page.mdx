@@ -1,0 +1,196 @@
+---
+title: "Módulo de Descarga de CFDI’s"
+description: "Descarga, control y gestión de CFDI emitidos y recibidos desde el SAT en Solución Factura"
+---
+
+El **Módulo de Descarga de CFDI’s de Solución Factura** permite recuperar y administrar todos los **Comprobantes Fiscales Digitales por Internet (CFDI)** emitidos y recibidos directamente desde los servidores del **SAT**, utilizando:
+
+- **FIEL (Firma Electrónica Avanzada)**, o
+- **Usuario y contraseña** del portal del SAT.
+
+Este módulo es una herramienta clave para mantener la **contabilidad actualizada**, realizar **conciliaciones automáticas** y **detectar operaciones con EFOS** (Empresas que Facturan Operaciones Simuladas) listadas por el SAT.
+
+---
+
+## 💰 Costo del módulo (Para planes que no lo incluye)
+
+**Precio:** **$1,199 MXN anuales**  
+✔️ Incluye actualizaciones  
+✔️ Soporte técnico especializado  
+✔️ Mejoras continuas del sistema  
+
+---
+
+## ⚙️ Opciones de conexión al SAT
+
+Solución Factura ofrece **dos métodos oficiales** para la descarga de CFDI:
+
+---
+
+### 🔐 Descarga con contraseña y captcha
+
+- Permite recuperar hasta **2,000 CFDI** (emitidos o recibidos) por sesión.
+- Requiere:
+  - RFC
+  - Contraseña del portal SAT
+  - Captcha de validación
+- Ideal para:
+  - Usuarios con **bajo volumen de operaciones**
+  - Descargas **ocasionales**
+
+---
+
+### 🧾 Descarga con FIEL (Firma Electrónica Avanzada)
+
+- Permite descargar hasta **200,000 CFDI** en una sola ejecución.
+- Utiliza:
+  - Archivo **.cer**
+  - Archivo **.key**
+  - Contraseña privada de la FIEL
+- Es el **método recomendado por el SAT** para empresas con alto volumen de facturación.
+
+---
+
+Ambas opciones se encuentran disponibles en el menú:
+
+**CFDI’s → Descarga de CFDI’s**
+
+Ahí podrás seleccionar:
+- Método de conexión
+- Tipo de CFDI
+- Rango de fechas
+
+---
+
+
+
+### Características principales
+
+- ⏰ Ejecución automática diaria a las **2:00 AM**
+- 📄 Descarga de CFDI:
+  - Emitidos
+  - Recibidos
+  - Cancelados
+- 🔄 Actualización continua de la información fiscal
+- 📂 Registro automático dentro del módulo CFDI’s
+
+> 📌 Esta función requiere tener cargada la **FIEL** en:  
+> **Empresa → pestaña FIEL**, y activar la opción  
+> **“Descarga automática de CFDI’s”**.
+
+---
+
+## 🔍 Control y organización de CFDI’s
+
+El sistema no solo descarga los CFDI, sino que también los **organiza automáticamente**:
+
+- **Emitidos:** Facturas generadas por tu empresa  
+- **Recibidos:** Compras, gastos y CFDI de proveedores  
+- **Cancelados:** CFDI anulados ante el SAT  
+- **Pendientes de conciliación:** CFDI descargados sin registro contable  
+
+Cada CFDI se almacena con:
+- UUID
+- RFC emisor y receptor
+- Monto
+- Tipo de documento  
+  (Ingreso, Egreso, Pago, Nómina, Traslado)
+- Estatus fiscal
+
+---
+
+## 🧠 Funciones adicionales del módulo
+
+Además de la descarga de CFDI, el módulo integra herramientas fiscales y contables avanzadas:
+
+---
+
+### 🧾 Conciliación bancaria
+
+Permite comparar los **movimientos bancarios** con los CFDI de egresos descargados, ayudando a detectar:
+
+- Diferencias de monto
+- Pagos no registrados
+- Movimientos inconsistentes
+
+La conciliación puede realizarse por:
+- Fecha
+- Monto
+- RFC del proveedor
+
+---
+
+### ⚠️ Validación de EFOS (Lista negra del SAT)
+
+Identifica si alguno de tus **clientes o proveedores** se encuentra en la **lista negra del SAT (EFOS)**, ayudándote a:
+
+- Evitar riesgos fiscales
+- Prevenir rechazos en deducciones
+- Mantener tu operación en regla
+
+---
+
+### 📊 Generación de DIOT
+
+A partir de los CFDI descargados, el sistema genera el archivo para la:
+
+**Declaración Informativa de Operaciones con Terceros (DIOT)**
+
+Cumple con los lineamientos del SAT y simplifica el proceso de declaración mensual.
+
+---
+
+### 📈 Reportes y análisis
+
+Los CFDI descargados se integran automáticamente a los reportes de:
+
+- Ingresos
+- Compras
+- Egresos
+
+Permitiendo generar reportes consolidados por:
+- Proveedor
+- Sucursal
+- Periodo
+
+---
+
+## 🧭 Cómo usar el módulo paso a paso
+
+1. En el menú lateral, ve a:  
+   **CFDI’s → Descarga de CFDI’s**
+2. Selecciona el **método de conexión**  
+   (Contraseña SAT o FIEL)
+3. Define:
+   - Rango de fechas
+   - Tipo de CFDI
+4. Haz clic en **Iniciar descarga**
+5. Visualiza, exporta o analiza los CFDI descargados
+6. *(Opcional)* Activa la **descarga automática diaria**
+
+---
+
+## 💡 Recomendaciones y buenas prácticas
+
+- Usa la **FIEL** siempre que sea posible (mayor capacidad y estabilidad).
+- Activa la **descarga automática** para mantener tu información actualizada.
+- Revisa periódicamente CFDI cancelados o duplicados.
+- Consulta la validación **EFOS** para evitar riesgos fiscales.
+- Aprovecha la **conciliación bancaria** y la **DIOT** para un mejor control contable.
+
+---
+
+## 🧾 Conclusión
+
+El **Módulo de Descarga de CFDI’s de Solución Factura** es una herramienta esencial para el control fiscal de tu empresa.
+
+Permite:
+- Descargar hasta **200,000 CFDI con FIEL**
+- Automatizar la descarga diaria
+- Detectar EFOS
+- Generar la DIOT sin complicaciones
+
+---
+
+💰 **Costo del módulo:** **$1,199 MXN anuales**  
+Incluye soporte técnico, actualizaciones y mejoras continuas.

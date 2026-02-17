@@ -68,6 +68,17 @@
               "ai-tools/claude-code",
               "ai-tools/windsurf"
             ]
+          },
+          {
+            "group": "Facturación",
+            "pages": [
+              "untitled-page",
+              "ei",
+              "factura",
+              "untitled-page",
+              "untitled-page",
+              "ca"
+            ]
           }
         ]
       },
