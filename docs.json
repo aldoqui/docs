@@ -15,16 +15,6 @@
           "anchor": "Documentation",
           "icon": "book-open-cover",
           "href": "https://mintlify.com/docs"
-        },
-        {
-          "anchor": "Community",
-          "icon": "slack",
-          "href": "https://mintlify.com/community"
-        },
-        {
-          "anchor": "Blog",
-          "icon": "newspaper",
-          "href": "https://mintlify.com/blog"
         }
       ]
     },
@@ -33,11 +23,10 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Inicio",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "quickstart"
             ]
           },
           {
@@ -53,31 +42,18 @@
             ]
           },
           {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          },
-          {
             "group": "Facturación",
             "pages": [
-              "untitled-page",
               "ei",
               "factura",
-              "untitled-page",
-              "untitled-page",
-              "ca"
+              "ddd",
+              "ca",
+              "descarg-cf-di",
+              "descargar-xml",
+              "descarga-con-fiel",
+              "comercio",
+              "periodi",
+              "importar"
             ]
           }
         ]
@@ -90,16 +66,13 @@
             "pages": [
               "api-reference/introduction"
             ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
           }
+        ]
+      },
+      {
+        "tab": "Cambios",
+        "pages": [
+          "ultimos-cambios"
         ]
       }
     ]

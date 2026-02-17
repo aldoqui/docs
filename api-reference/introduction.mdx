@@ -1,33 +1,234 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: "Introducción a la API de Solución Factura"
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+La **API de Solución Factura** permite integrar tu sistema, ERP o aplicación con nuestra plataforma de facturación electrónica, facilitando la **gestión automatizada de clientes, productos y CFDI**.
 
-## Welcome
+Esta API está diseñada para desarrolladores y empresas que necesitan:
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+- Automatizar la creación de clientes y productos
+- Timbrar, cancelar y descargar CFDI
+- Integrarse con ERPs, CRMs o sistemas propios
+- Cumplir con CFDI 4.0 y lineamientos del SAT
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+---
 
-## Authentication
+## Autenticación
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+Todas las peticiones requieren autenticación mediante **Bearer Token**:
+Content-Type: application/jsontoxml
 
-```json
-"security": [
-  {
-    "bearerAuth": []
+
+---
+
+## URL base
+
+
+
+https://app.solucionfactura.com
+
+
+---
+
+## Formato de datos
+
+- Envío de datos: **JSON**
+- Respuesta: **JSON**
+- Los valores deben coincidir con los **catálogos SAT** configurados en Solución Factura
+
+---
+
+## Estructura de la API
+
+La documentación se divide en los siguientes módulos:
+
+- Clientes
+- Productos
+- Facturación
+- Cancelación
+- Descarga de CFDI
+
+Cada módulo incluye:
+- Endpoint
+- Método HTTP
+- Ejemplo de request
+- Respuesta exitosa
+- Respuesta de error
+
+---
+
+# API – Alta de clientes
+
+## Endpoint
+
+**POST** `/api/customers/create`
+
+---
+
+## Headers
+
+
+
+Authorization: Bearer TU_TOKEN
+Content-Type: application/jsontoxml
+
+
+---
+
+## Ejemplo de request
+
+```bash
+curl --request POST \
+--url https://app.solucionfactura.com/api/customers/create \
+--header 'Content-Type: application/jsontoxml' \
+--header 'Authorization: Bearer TU_TOKEN' \
+--data '{
+  "Nombre": "ROSENDO HERNANDEZ CRUZ",
+  "Rfc": "XAXX010101000",
+  "RegimenFiscal": "601"
+}'
+
+Respuesta exitosa
+{
+  "data": {
+    "id": 13
+  },
+  "message": "La información se ha guardado con éxito"
+}
+
+Respuesta de error
+{
+  "error": {
+    "Rfc": [
+      "El RFC ya se encuentra registrado"
+    ]
+  },
+  "code": 422
+}
+
+API – Consulta de clientes
+Endpoint
+
+POST /api/customers
+
+Ejemplo de request
+curl --request POST \
+--url https://app.solucionfactura.com/api/customers \
+--header 'Content-Type: application/jsontoxml' \
+--header 'Authorization: Bearer TU_TOKEN' \
+--data '{
+  "Rfc": "XAXX010101000"
+}'
+
+Respuesta exitosa
+{
+  "data": {
+    "current_page": 1,
+    "data": [
+      {
+        "id": 13,
+        "taxid": "XAXX010101000",
+        "name": "ROSENDO HERNANDEZ CRUZ"
+      }
+    ]
   }
-]
-```
+}
+
+API – Alta de productos
+Endpoint
+
+POST /api/products/create
+
+Ejemplo de request
+curl --request POST \
+--url https://app.solucionfactura.com/api/products/create \
+--header 'Content-Type: application/jsontoxml' \
+--header 'Authorization: Bearer TU_TOKEN' \
+--data '{
+  "Nombre": "Servicio general",
+  "ClaveUnidad": "H87",
+  "ClaveProdServ": "40111503",
+  "Precio": "525.95"
+}'
+
+Respuesta exitosa
+{
+  "data": {
+    "id": 13
+  },
+  "message": "La información se ha guardado con éxito"
+}
+
+API – Consulta de productos
+Endpoint
+
+POST /api/products
+
+Ejemplo de request
+{
+  "Descripcion": "Servicio"
+}
+
+API – Timbrar factura
+Endpoint
+
+POST /api/customer-invoices/stamp
+
+Ejemplo básico de request
+{
+  "Version": "4.0",
+  "FormaPago": "01",
+  "MetodoPago": "PUE",
+  "Moneda": "MXN",
+  "Emisor": {
+    "Rfc": "EKU9003173C9",
+    "RegimenFiscal": "601"
+  },
+  "Receptor": {
+    "Rfc": "XAXX010101000",
+    "Nombre": "PUBLICO EN GENERAL",
+    "RegimenFiscalReceptor": "616",
+    "UsoCFDI": "S01"
+  },
+  "Conceptos": []
+}
+
+Respuesta exitosa
+{
+  "data": {
+    "id": 13,
+    "uuid": "15C7598F-CA40-59FF-8383-6F313FF3A67D"
+  },
+  "message": "La factura se ha generado con éxito"
+}
+
+API – Cancelar factura
+Endpoint
+
+POST /api/customer-invoices/cancel
+
+Ejemplo de request
+{
+  "Id": "13",
+  "MotivoCancelacion": "03"
+}
+
+API – Descargar factura
+Endpoint
+
+POST /api/customer-invoices/download
+
+Ejemplo de request
+{
+  "Id": "13"
+}
+
+Notas y consideraciones
+
+Esta API cumple con CFDI 4.0
+
+Los valores deben coincidir con el Anexo 20 del SAT
+
+Los catálogos válidos se configuran en Solución Factura
+
+Los errores de validación usan HTTP 422
