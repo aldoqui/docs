@@ -126,5 +126,8 @@
   "banner": {
     "dismissible": true,
     "content": "Soporte"
+  },
+  "appearance": {
+    "strict": true
   }
 }
