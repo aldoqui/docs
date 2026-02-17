@@ -81,8 +81,12 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Soporte",
+        "href": "mailto:contacto@solucionfactura.mx"
+      },
+      {
+        "label": "Inicio sesion",
+        "href": "https://app.solucionfactura.mx"
       }
     ],
     "primary": {
@@ -112,5 +116,11 @@
   },
   "background": {
     "image": "/images/spin(4167x4167px).png"
-  }
+  },
+  "errors": {
+    "404": {
+      "redirect": false
+    }
+  },
+  "description": "Documentacion | Solucion Factura"
 }
