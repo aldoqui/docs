@@ -1,0 +1,101 @@
+---
+title: "Configuración de envío de facturas por WhatsApp"
+description: "Vincula tu WhatsApp y automatiza el envío de PDF y XML desde Solución Factura"
+---
+
+## 1. Introducción
+
+Este tutorial es una actualización dirigida a los usuarios que envían sus comprobantes a través de su **WhatsApp personal**.  
+El sistema permite **vincular tu cuenta** para automatizar el envío de facturas directamente a tus clientes.
+
+---
+
+## 2. Vinculación de la cuenta de WhatsApp
+
+1. Accede al formulario de registro en:  
+   **https://wa.solucionfactura.mx**
+2. Haz clic en el botón **“Conectar WhatsApp”**.
+3. Se generará un **código QR** en pantalla.
+4. Desde tu dispositivo móvil:
+   - Abre **WhatsApp**
+   - Ve a **Dispositivos vinculados**
+   - Escanea el código QR (similar a WhatsApp Web)
+5. Una vez escaneado, el sistema mostrará el estado **“Conectado”** y generará una **URL de Webhook**.
+
+<Note>
+  Esta función está disponible inicialmente para **Planes Premium**.  
+  Si deseas probarla, contacta al equipo de soporte para habilitar tu cuenta.
+</Note>
+
+---
+
+## 3. Configuración en el sistema de facturación
+
+1. Copia la **URL del Webhook** generada en el paso anterior.
+2. Dirígete a tu sistema de **Solución Factura**.
+3. Ve al menú:  
+   **Ajustes → Configuración → Integraciones**
+4. Ubica la sección **“Mensajes vía Webhook”**.
+5. Pega la URL en el campo **“Webhook URL”**.
+6. Haz clic en **Guardar**.
+
+<Note>
+  Importante: Asegúrate de tener activa **solo una opción de envío**.  
+  Desactiva otras integraciones de WhatsApp para evitar conflictos.
+</Note>
+
+---
+
+## 4. Personalización del mensaje
+
+Desde el panel de **wa.solucionfactura.mx** puedes crear tu plantilla de mensaje usando variables dinámicas como:
+
+- `{nombre}`
+- `{factura}`
+- `{fecha}`
+- `{importe}`
+
+Ejemplo:
+
+> Hola {nombre}, te compartimos tu factura {factura} con fecha {fecha} por un importe de {importe}.
+
+✔️ Puedes usar **saltos de línea** y **emojis** para hacerlo más amigable.  
+Después, haz clic en **“Guardar Plantilla”**.
+
+---
+
+## 5. Proceso de envío de la factura
+
+1. Ve al listado de **Facturas** en el sistema.
+2. Haz clic en el botón de **WhatsApp** junto a la factura deseada.
+3. Ingresa el número del cliente a **10 dígitos** y presiona **Enter**  
+   (o selecciona el contacto si ya está guardado).
+4. El sistema mostrará el mensaje:  
+   **“La factura ha sido enviada con éxito”**.
+
+<Note>
+  Por el momento, esta función está optimizada para **facturas**.  
+  **Notas de venta** y **cotizaciones** estarán disponibles próximamente.
+</Note>
+
+---
+
+## 6. Resultado final
+
+El cliente recibirá un mensaje de WhatsApp con el texto personalizado que configuraste, adjuntando automáticamente:
+
+- 📄 **PDF**
+- 📄 **XML**
+
+---
+
+## 🎥 Video tutorial: Envío de facturas por WhatsApp
+
+<iframe
+  src="https://app.screencast.com/AwhxpSVJ7dmj9/e"
+  width="100%"
+  height="600"
+  frameborder="0"
+  scrolling="no"
+  allowfullscreen
+></iframe>
