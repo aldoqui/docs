@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "mint",
   "name": "Solución Factura",
   "colors": {
     "primary": "#2360db",
@@ -122,5 +122,9 @@
       "redirect": false
     }
   },
-  "description": "Documentacion | Manual"
+  "description": "Documentacion | Manual",
+  "banner": {
+    "dismissible": true,
+    "content": "Soporte"
+  }
 }
