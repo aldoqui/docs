@@ -121,6 +121,6 @@
     "content": "Soporte"
   },
   "appearance": {
-    "strict": false
+    "strict": true
   }
 }
