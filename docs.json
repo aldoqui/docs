@@ -55,10 +55,10 @@
               {
                 "group": "Facturación",
                 "pages": [
-                  "ei",
+                  "facturarecurrente",
                   "factura",
-                  "ddd",
-                  "ca",
+                  "emitir72",
+                  "complementoeducativo",
                   "descarg-cf-di",
                   "descargar-xml",
                   "descarga-con-fiel",
