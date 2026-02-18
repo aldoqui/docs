@@ -18,61 +18,57 @@
         }
       ]
     },
-    "tabs": [
+    "products": [
       {
-        "tab": "Guides",
-        "groups": [
+        "product": "Whitelabel",
+        "tabs": [
           {
-            "group": "Inicio",
+            "tab": "Guides",
             "pages": [
-              "index",
-              "quickstart"
-            ]
-          },
-          {
-            "group": "Configuraciones",
-            "pages": [
-              "como-configurar-empresa",
-              "essentials/configurar-sucursales",
-              "essentials/untitled-page",
-              "essentials/untitled-page-1",
-              "essentials/untitled-page-2",
-              "essentials/untitled-page-3",
-              "essentials/untitled-page-4"
-            ]
-          },
-          {
-            "group": "Facturación",
-            "pages": [
-              "ei",
-              "factura",
-              "ddd",
-              "ca",
-              "descarg-cf-di",
-              "descargar-xml",
-              "descarga-con-fiel",
-              "comercio",
-              "periodi",
-              "importar"
+              {
+                "group": "Inquilinos",
+                "pages": [
+                  "que-es-un-inquilino"
+                ]
+              },
+              "administracion-white-label",
+              {
+                "group": "Inicio",
+                "pages": [
+                  "index",
+                  "quickstart"
+                ]
+              },
+              "untitled-page",
+              {
+                "group": "Configuraciones",
+                "pages": [
+                  "como-configurar-empresa",
+                  "essentials/configurar-sucursales",
+                  "essentials/untitled-page",
+                  "essentials/untitled-page-1",
+                  "essentials/untitled-page-2",
+                  "essentials/untitled-page-3",
+                  "essentials/untitled-page-4"
+                ]
+              },
+              {
+                "group": "Facturación",
+                "pages": [
+                  "ei",
+                  "factura",
+                  "ddd",
+                  "ca",
+                  "descarg-cf-di",
+                  "descargar-xml",
+                  "descarga-con-fiel",
+                  "comercio",
+                  "periodi",
+                  "importar"
+                ]
+              }
             ]
           }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Cambios",
-        "pages": [
-          "ultimos-cambios"
         ]
       }
     ]
@@ -87,26 +83,6 @@
       {
         "label": "Inicio sesion",
         "href": "https://app.solucionfactura.mx"
-      },
-      {
-        "label": "",
-        "href": "https://google.com"
-      },
-      {
-        "label": "",
-        "href": "https://google.com"
-      },
-      {
-        "label": "",
-        "href": "https://google.com"
-      },
-      {
-        "label": "",
-        "href": "https://google.com"
-      },
-      {
-        "label": "",
-        "href": "https://google.com"
       }
     ],
     "primary": {
