@@ -9,15 +9,6 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "icon": "book-open-cover",
-          "href": "https://mintlify.com/docs"
-        }
-      ]
-    },
     "products": [
       {
         "product": "Solucion Factura",
@@ -72,12 +63,7 @@
       {
         "product": "Whitelabel",
         "pages": [
-          {
-            "group": "Inquilinos",
-            "pages": [
-              "que-es-un-inquilino"
-            ]
-          },
+          "que-es-un-inquilino",
           "administracion-white-label",
           "untitled-page"
         ]
