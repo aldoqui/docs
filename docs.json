@@ -20,18 +20,17 @@
     },
     "products": [
       {
-        "product": "Whitelabel",
+        "product": "Solucion Factura",
+        "icon": "book-bible",
+        "color": {
+          "light": "#1522a3",
+          "dark": "#1522a3"
+        },
+        "description": "solucion-factura",
         "tabs": [
           {
             "tab": "Guides",
-            "pages": [
-              {
-                "group": "Inquilinos",
-                "pages": [
-                  "que-es-un-inquilino"
-                ]
-              },
-              "administracion-white-label",
+            "groups": [
               {
                 "group": "Inicio",
                 "pages": [
@@ -39,7 +38,6 @@
                   "quickstart"
                 ]
               },
-              "untitled-page",
               {
                 "group": "Configuraciones",
                 "pages": [
@@ -69,6 +67,19 @@
               }
             ]
           }
+        ]
+      },
+      {
+        "product": "Whitelabel",
+        "pages": [
+          {
+            "group": "Inquilinos",
+            "pages": [
+              "que-es-un-inquilino"
+            ]
+          },
+          "administracion-white-label",
+          "untitled-page"
         ]
       }
     ]
