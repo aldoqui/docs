@@ -1,0 +1,191 @@
+---
+title: Manual API – Solución Factura
+description: Documentación oficial de la API de Solución Factura (CFDI 4.0)
+---
+
+## Introducción
+
+La **API de Solución Factura** permite integrar funcionalidades de facturación electrónica CFDI 4.0, incluyendo:
+
+- Alta y consulta de clientes
+- Alta y consulta de productos
+- Timbrado de facturas
+- Cancelación de CFDI
+- Descarga de XML y PDF
+
+---
+
+## Autenticación
+
+Todos los endpoints requieren autenticación mediante **Bearer Token**.
+
+<Callout type="info">
+Incluye siempre los siguientes headers en cada petición.
+</Callout>
+
+```http
+Authorization: Bearer TU_TOKEN_AQUI
+Content-Type: application/jsontoxml
+Clientes
+Alta de cliente
+Endpoint
+
+POST /api/customers/create
+Descripción
+Registra un nuevo cliente (receptor) en el sistema.
+
+Ejemplo de request
+curl --request POST \
+--url https://app.solucionfactura.com/api/customers/create \
+--header 'Content-Type: application/jsontoxml' \
+--data '{
+  "Nombre": "ROSENDO HERNANDEZ CRUZ",
+  "Rfc": "XAXX010101000",
+  "RegimenFiscal": "601",
+  "TerminoPago": "Contado",
+  "FormaPago": "01",
+  "MetodoPago": "PUE",
+  "UsoCFDI": "G03",
+  "CorreoElectronico": "correo@ejemplo.com",
+  "Direccion": {
+    "Calle": "Av Juarez",
+    "NoExt": "1",
+    "Colonia": "Centro",
+    "Pais": "Mexico",
+    "Estado": "Queretaro",
+    "CodigoPostal": "71520"
+  }
+}'
+Respuesta exitosa
+{
+  "data": {
+    "id": 13
+  },
+  "message": "La información se ha guardado con éxito"
+}
+Error común
+{
+  "error": {
+    "Rfc": [
+      "El RFC ya se encuentra registrado"
+    ]
+  },
+  "code": 422
+}
+Consulta de clientes
+Endpoint
+
+POST /api/customers
+Parámetros de búsqueda
+{
+  "Telefono": "",
+  "CorreoElectronico": "",
+  "Rfc": "",
+  "Nombre": "",
+  "Id": "",
+  "RegistrosPorPagina": 100
+}
+Productos
+Alta de producto
+Endpoint
+
+POST /api/products/create
+Ejemplo de request
+{
+  "Nombre": "Servicio general",
+  "Descripcion": "Servicio general de limpieza",
+  "ClaveUnidad": "H87",
+  "ClaveProdServ": "40111503",
+  "Precio": "525.95",
+  "ObjetoDeImpuesto": "02",
+  "Impuestos": {
+    "Traslados": [
+      {
+        "Impuesto": "002",
+        "TasaOCuota": "0.16",
+        "TipoFactor": "Tasa"
+      }
+    ]
+  }
+}
+Consulta de productos
+Endpoint
+
+POST /api/products
+Parámetros
+{
+  "Codigo": "",
+  "Descripcion": "",
+  "ClaveUnidad": "",
+  "ClaveProdServ": "",
+  "Id": "",
+  "RegistrosPorPagina": 100
+}
+Facturación CFDI 4.0
+Timbrar factura
+Endpoint
+
+POST /api/customer-invoices/stamp
+<Tabs> <Tab title="Request">
+{
+  "Version": "4.0",
+  "FormaPago": "01",
+  "MetodoPago": "PUE",
+  "Moneda": "MXN",
+  "Emisor": {
+    "Rfc": "EKU9003173C9",
+    "RegimenFiscal": "601"
+  },
+  "Receptor": {
+    "Rfc": "XAX010101000",
+    "Nombre": "ROSENDO HERNANDEZ CRUZ",
+    "UsoCFDI": "G03"
+  },
+  "Conceptos": [
+    {
+      "ClaveProdServ": "50211503",
+      "Cantidad": "1",
+      "ClaveUnidad": "H87",
+      "Descripcion": "Servicio carretero",
+      "ValorUnitario": "122.00",
+      "ObjetoDeImpuesto": "02"
+    }
+  ]
+}
+</Tab> <Tab title="Respuesta exitosa">
+{
+  "data": {
+    "id": 13,
+    "name": "FAC13",
+    "uuid": "15C7598F-CA40-59FF-8383-6F313FF3A67D"
+  },
+  "message": "La factura se ha generado con éxito"
+}
+</Tab> </Tabs>
+Cancelar factura
+Endpoint
+
+POST /api/customer-invoices/cancel
+{
+  "Id": "13",
+  "MotivoCancelacion": "03",
+  "UUIDSustitucion": ""
+}
+Descargar factura (XML y PDF)
+Endpoint
+
+POST /api/customer-invoices/download
+{
+  "Id": "13"
+}
+{
+  "file_zip": "BASE64_ZIP"
+}
+Notas importantes
+<Callout type="warning"> Este documento no incluye los valores detallados de los catálogos SAT. </Callout>
+Consulta el Anexo 20 del SAT para estructura CFDI.
+
+Los catálogos válidos deben obtenerse desde Solución Factura.
+
+El campo file_zip se entrega en Base64.
+

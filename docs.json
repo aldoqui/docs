@@ -55,6 +55,12 @@
                   "periodi",
                   "importar"
                 ]
+              },
+              {
+                "group": "Api",
+                "pages": [
+                  "documentacion"
+                ]
               }
             ]
           }
