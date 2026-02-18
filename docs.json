@@ -117,7 +117,7 @@
   },
   "description": "Documentacion | Manual",
   "banner": {
-    "dismissible": false,
+    "dismissible": true,
     "content": "Soporte"
   },
   "appearance": {
