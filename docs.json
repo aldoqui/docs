@@ -59,7 +59,8 @@
               {
                 "group": "Descarga XML",
                 "pages": [
-                  "como-agregar-clientes-empresas"
+                  "como-agregar-clientes-empresas",
+                  "como-descargar-xml"
                 ]
               },
               {
