@@ -1,13 +1,12 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "palm",
   "name": "Solución Factura",
   "colors": {
     "primary": "#2360db",
     "light": "#066cc9",
     "dark": "#020991"
   },
-  "favicon": "/favicon.svg",
   "navigation": {
     "products": [
       {
@@ -124,7 +123,7 @@
   },
   "description": "Documentacion | Manual",
   "banner": {
-    "dismissible": true,
+    "dismissible": false,
     "content": "Soporte"
   },
   "appearance": {
