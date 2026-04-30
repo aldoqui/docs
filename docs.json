@@ -5,7 +5,7 @@
   "colors": {
     "primary": "#2360db",
     "light": "#066cc9",
-    "dark": "#020991"
+    "dark": "#ffffff"
   },
   "navigation": {
     "products": [
@@ -127,6 +127,7 @@
     "content": "Soporte"
   },
   "appearance": {
-    "strict": true
+    "strict": false,
+    "default": "light"
   }
 }
